@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:state_management/controllers/countController.dart';
 import 'package:state_management/controllers/userController.dart';
+import 'package:state_management/screens/third.dart';
 
 class Second extends StatelessWidget {
   const Second({Key? key}) : super(key: key);
@@ -34,6 +35,12 @@ class Second extends StatelessWidget {
           GetX<UserController>(
             builder: (controller) =>
                 Text('Count: ${controller.user.value.count}'),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Get.to(() => Third());
+            },
+            child: Text('GoTo Third Screen'),
           ),
         ],
       ),
