@@ -3,7 +3,7 @@ class User {
   int count;
 
   User({
-    required this.name,
-    required this.count,
+    this.name = 'Default Name',
+    this.count = 0,
   });
 }
